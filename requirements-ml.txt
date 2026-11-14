@@ -1,0 +1,3 @@
+# Optional: local speech-to-text (Hindi, Marathi, English)
+faster-whisper>=1.2.0
+

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Profile & preferences. Uses the same tokens as the rest of the app.
+   ========================================================================== */
+.profile { display: grid; gap: var(--space-6); padding-bottom: calc(var(--space-12) + 64px); }
+.profile__section { display: grid; gap: var(--space-5); }
+.profile__intro { color: var(--color-text-muted); font-size: var(--text-small); margin-top: -2px; }
+
+/* Overview */
+.ov { display: grid; grid-template-columns: auto 1fr minmax(180px, 260px); gap: var(--space-6); align-items: center; }
+.ov__avatar { width: 72px; height: 72px; border-radius: 22px; background: var(--color-primary); color: var(--color-accent); display: grid; place-items: center; font: 700 1.9rem var(--font-display); }
+.ov__name { font: 700 1.35rem/1.2 var(--font-display); }
+.ov__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+.ov__stats { display: flex; gap: var(--space-6); margin-top: var(--space-3); flex-wrap: wrap; }
+.ov__stat strong { display: block; font: 700 1.25rem var(--font-display); }
+.meter { height: 8px; border-radius: var(--radius-pill); background: var(--color-surface-muted); overflow: hidden; }
+.meter > i { display: block; height: 100%; background: var(--color-accent); border-radius: inherit; transition: width 300ms var(--ease); }
+.meter__label { display: flex; justify-content: space-between; font-size: var(--text-caption); margin-bottom: 6px; }
+
+/* Creator type picker */
+.type-pick { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-3); }
+.type-pick label { position: relative; display: grid; gap: 2px; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); background: var(--color-surface); cursor: pointer; transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.type-pick label:hover { border-color: var(--color-primary); }
+.type-pick input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.type-pick strong { font-size: var(--text-small); }
+.type-pick span { font-size: var(--text-caption); color: var(--color-text-muted); }
+.type-pick label:has(input:checked) { border-color: var(--color-accent); background: var(--color-accent-soft); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.type-pick label:has(input:focus-visible) { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+/* Social accounts (dashed cards, like the reference) */
+.plat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--space-4); }
+.plat { display: grid; justify-items: center; text-align: center; gap: var(--space-2); padding: var(--space-5) var(--space-4); border: 1.5px dashed var(--color-border-strong); border-radius: var(--radius-lg); background: var(--color-surface); }
+.plat.is-on { border-style: solid; border-color: var(--color-border); background: var(--color-surface); box-shadow: var(--shadow-sm); }
+.plat__logo { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; color: #fff; font: 700 0.9rem var(--font-display); letter-spacing: -0.02em; }
+.plat__name { font-weight: 600; }
+.plat__sub { font-size: var(--text-caption); color: var(--color-text-muted); min-height: 2.6em; word-break: break-word; }
+.plat__actions { display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center; }
+.plat--instagram .plat__logo { background: linear-gradient(45deg, #f09433, #dc2743 55%, #bc1888); }
+.plat--youtube .plat__logo { background: #E02424; } .plat--twitch .plat__logo { background: #7C4DDB; }
+.plat--facebook .plat__logo { background: #1877F2; } .plat--threads .plat__logo, .plat--x .plat__logo, .plat--tiktok .plat__logo { background: #14151A; }
+.plat--linkedin .plat__logo { background: #0A66C2; } .plat--pinterest .plat__logo { background: #D4122E; } .plat--spotify .plat__logo { background: #178A44; }
+
+/* Fields */
+.field-error { color: var(--color-danger-ink); font-size: var(--text-caption); margin-top: 4px; display: flex; gap: 6px; align-items: flex-start; }
+.input[aria-invalid="true"], .select[aria-invalid="true"], .textarea[aria-invalid="true"] { border-color: var(--color-danger); box-shadow: 0 0 0 1px var(--color-danger); }
+.counter { font-size: var(--text-caption); color: var(--color-text-muted); text-align: right; }
+.lang-set { display: flex; flex-wrap: wrap; gap: var(--space-4); padding-top: 4px; }
+.private-note { display: flex; gap: var(--space-2); align-items: flex-start; font-size: var(--text-caption); color: var(--color-text-muted); background: var(--color-surface-muted); padding: var(--space-3); border-radius: var(--radius-sm); }
+.private-note svg.i { flex: none; margin-top: 2px; }
+
+/* Save bar */
+.savebar { position: sticky; bottom: var(--space-4); z-index: 46; display: flex; align-items: center; gap: var(--space-3); justify-content: space-between; padding: var(--space-3) var(--space-4); background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(8px); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.savebar__status { font-size: var(--text-small); color: var(--color-text-muted); }
+.savebar__status.is-dirty { color: var(--color-warning-ink); font-weight: 600; }
+.savebar__btns { display: flex; gap: var(--space-2); }
+
+@media (max-width: 900px) {
+  .ov { grid-template-columns: auto 1fr; }
+  .ov__side { grid-column: 1 / -1; }
+  .savebar { bottom: calc(var(--bottomnav-h) + var(--space-3)); }
+  .profile { padding-bottom: calc(var(--space-12) + 120px); }
+  body.page-profile .fab { bottom: calc(var(--bottomnav-h) + 88px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 560px) {
+  .savebar { flex-direction: column; align-items: stretch; }
+  .savebar__btns > * { flex: 1; }
+  .plat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+}

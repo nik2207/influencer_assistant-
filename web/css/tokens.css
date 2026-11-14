@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Design tokens. Every colour, size and space in the app comes from here.
+   ========================================================================== */
+:root {
+  /* Surfaces */
+  --color-bg: #F4F7F8;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #EEF2F4;
+
+  /* Sidebar */
+  --color-sidebar-top: #1E3A47;
+  --color-sidebar-bottom: #122229;
+  --color-sidebar-text: rgba(255, 255, 255, 0.88);
+  --color-sidebar-muted: rgba(255, 255, 255, 0.58);
+
+  /* Brand */
+  --color-primary: #0F4C5C;
+  --color-primary-hover: #0D3F4D;
+  --color-accent: #5EEAD4;
+  --color-accent-hover: #2DD4BF;
+  --color-accent-soft: #CCFBF1;
+  --color-accent-ink: #0F766E;
+  --color-accent-warm: #F9A8D4;
+
+  --color-text: #0F172A;
+  --color-text-muted: #5B6B7C;
+
+  --color-border: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+  --color-focus: #14B8A6;
+
+  --color-success: #059669;  --color-success-soft: #D1FAE5;  --color-success-ink: #065F46;
+  --color-warning: #D97706;  --color-warning-soft: #FEF3C7;  --color-warning-ink: #92400E;
+  --color-danger:  #DC2626;  --color-danger-soft:  #FEE2E2;  --color-danger-ink:  #991B1B;
+  --color-info:    #0284C7;  --color-info-soft:    #E0F2FE;  --color-info-ink:    #075985;
+  --color-purple:  #7C3AED;  --color-purple-soft:  #EDE9FE;  --color-purple-ink:  #5B21B6;
+
+  --font-display: "Bricolage Grotesque", "Hind", system-ui, sans-serif;
+  --font-body: "Hind", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-caption: 0.8125rem;
+  --text-small: 0.9375rem;
+  --text-body: 1rem;
+  --text-card-title: 1.0625rem;
+  --text-section: 1.25rem;
+  --text-page: clamp(1.625rem, 1.2rem + 1.4vw, 2.125rem);
+  --text-metric: clamp(1.625rem, 1.3rem + 1vw, 2rem);
+
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;  --space-4: 1rem;
+  --space-5: 1.25rem;  --space-6: 1.5rem;   --space-8: 2rem;     --space-10: 2.5rem;  --space-12: 3rem;
+
+  --radius-sm: 8px;  --radius-md: 12px;  --radius-lg: 16px;  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 28px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 22px 50px rgba(15, 23, 42, 0.16);
+
+  --dur: 140ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --header-h: 0px;
+  --sidebar-w: 252px;
+  --sidebar-w-mobile: 72px;
+  --bottomnav-h: 64px;
+  --page-max: 1280px;
+  --chat-w: 390px;
+}

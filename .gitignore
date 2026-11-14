@@ -1,0 +1,6 @@
+.env
+data/app.db
+data/invoices/*.pdf
+__pycache__/
+.venv/
+.pytest_cache/

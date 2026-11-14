@@ -1,0 +1,7 @@
+.content-banner { font-size: var(--text-sm); color: var(--text-muted); padding: var(--space-3); border-left: 3px solid var(--accent); margin-bottom: var(--space-4); background: var(--surface-2); border-radius: var(--radius-sm); }
+.content-filters { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: flex-end; margin-bottom: var(--space-4); }
+.content-editor textarea { min-height: 140px; font-family: inherit; }
+.status-chip { font-size: 0.75rem; padding: 0.15rem 0.45rem; border-radius: var(--radius-sm); background: var(--surface-3); text-transform: capitalize; }
+.cal-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; font-size: var(--text-sm); }
+.cal-cell { min-height: 52px; padding: 4px; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.cal-cell--has { background: color-mix(in srgb, var(--accent) 12%, transparent); }

@@ -1,0 +1,10 @@
+.analytics-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.analytics-card { padding: var(--space-4); }
+.analytics-card h3 { margin: 0 0 var(--space-2); font-size: var(--text-lg); }
+.metric-pill { display: inline-flex; align-items: center; gap: 0.35rem; font-size: var(--text-sm); margin: 0.15rem 0.35rem 0.15rem 0; }
+.src-badge { font-size: 0.7rem; padding: 0.1rem 0.35rem; border-radius: var(--radius-sm); background: var(--surface-3); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.src-badge--verified { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent-strong); }
+.chart-bars { display: flex; align-items: flex-end; gap: 4px; min-height: 120px; margin-top: var(--space-3); }
+.chart-bars span { flex: 1; background: color-mix(in srgb, var(--accent) 55%, var(--surface-2)); border-radius: 3px 3px 0 0; min-width: 6px; }
+.analytics-filters { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: flex-end; margin-bottom: var(--space-4); }
+.insights-box { white-space: pre-wrap; font-size: var(--text-sm); line-height: 1.5; color: var(--text-muted); }
